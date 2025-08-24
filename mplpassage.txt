@@ -1,0 +1,430 @@
+
+•	Master Part List is an application that provides complete electronics data management, supporting design activities and established as a standard tool across all development locations. It ensures every designer has access to the latest Modules and Schematic Designs. Clearly defined workflows and consistent use of the Master Part List tool-chain in EBS development are mandatory to effectively address the challenges of the existing environment.
+•	MPLD installation on new laptop needs steps as follows 1.  MPL MPLD prerequisites software needed software:  Windows Operating System version should be Windows 11, Oracle client 32-bit must have been installed and software version must be equal to or above 11.2.0.4 
+2.	Download the exe from below location, unzip it and install the MPL
+VED MasterPartList - Documents
+•	MPLD users can download MPLD exe from VED MasterPartList - Documents location
+•	MPLD Support team MA Mujeeb Siddiqui and Prasanta Kumar Das
+•	MPLD support windows 11 with 32 bits
+•	MPL MPLD prerequisites software /needed software:  Windows Operating System version should be Windows 11, Oracle client 32-bit must have been installed and software version must be equal to or above 11.2.0.4 
+•	MPLD exe can be download from below link: VED MasterPartList - Documents
+•	MPLD system is not available or Support mail: 
+Please write an E-Mail to VED.toolsupport@continental-corporation.com , your message will be evaluated immediately.  
+•	Characters allowed in MPLD: Allowed alphanumeric chars: A to Z, a to Z, 0 to 9. Allowed special chars: () “! ~ # @ $ % & ^ * - _ = + , . / ; :  ? > < µ © ® ƒ ° ¹ ² ³ ± \ | { } [ ]' 
+•	Open schematic related buttons will be visible if following criteria is met:  Zuken software should be installed in user’s machine with compatible version.  MPLD application should be launched from triplE. 
+  
+•	User can find the logs in MPLD in  (Session & Application) under path. C:\CAx\App\Userware\MPLD\logs 
+•	MPLD User can find the exported excel files under the below path. C:\Users\userid\Downloads 
+•	MPLD support team can be contact through  Launch MPLD application, go to Support / About -> Support tab and click on ‘Get Support’ button.   Write your concern in the out-look window then click on ‘Send’ button. 
+•	Check Release Status  button disabled in module schematic due to 
+This button will be enabled if following criteria is met:
+User should select a row in the exported layout schematics grid.
+Selected row must not contain any errors.
+•	Release / Update  button is disabled in module schematic due to
+This button will be enabled if check release status does not contain any errors.
+ 
+•	Update if BOM equals button is not visible in module schematic due to  User should have “Superuser” role for this button to be visible.
+ 
+•	Update if BOM equals” button will be enabled in module schematic due to 
+Module is created. CM2P/LM2P is created including the module.
+Module identity to former released module (network connection to be changed in the module).
+
+•	When “Open previous stored schematic revision” button will be enabled in module schematic?
+ This button will be enabled if following criteria is met:
+User should select a row in the exported module schematics grid.
+Perform check release status.
+Exported module schematic previous version should exist.
+ 
+•	Does eCAD impact to open schematic in “Released Modules” tab?
+Yes, if eCAD type of family/master/variant/version is matching with selected eCAD type, then schematic will be opened with the respective eCAD editor.
+
+•	What happens when clicked on “Update” button in “Module Properties” tab?
+Module information will be updated such as module description, variant description, version description, release, compatibility, and CM2P visibility of the selected module version.
+
+•	Why “Invisible Module Project Request” tab is not visible to user?
+This tab will be visible to the user who has “Application Engineer/Basic Developer Manager” role.
+ 
+•	Why “Approve” and “Reject” buttons are not visible to user in “Invisible Module Project Request” tab?
+Approve and Reject buttons are visible to the user who has “Basic Developer Manager” role.
+ 
+•	How to view module details in “Invisible Module Project Request” tab?
+User needs to select a row in ‘Invisible Module Project Requests’ DataGrid to view/export module details.
+
+•	Why “Exception Table” tab is not visible to user?
+This tab will be visible to the user who has “Schematic Manager” role.
+ 
+•	How to change module family in “Exception Table”?
+Navigate to Module Schematic --> Released Module tab and select module family. Once navigate to ‘Exception Table’ tab where module family name should be shown on the top and corresponding Component/Label details will be displayed.
+
+•	Why “Compare Schematic” button is disabled in exported module schematic? 
+This button will be enabled if following criteria is met: 
+1.      User should select a row in the exported layout schematics grid. 
+2.      Selected row must not contain any errors.
+
+•	What are the main features of the MPLD 5.0 rollout in Module Schematic?
+In MPLD 5.0 rollout, below features are included
+Update module release level based on user permissions.
+Module visibility management (Update version/variant and family).
+Module visibility update (Switch modules to invisible if it contains preferred level =’No’ components after 1:1 substitution)
+
+•	Users who has “Basic Developer Manager/Basic Developer” role can perform Update Family/Update Variant.
+Note: - Basic Developer Manager can change the visibility of Module Family and Module Variant for all Module Families.
+Basic Developer can change the visibility of Module Family and Module Variant for his own Module Families, but not for Families / Variants of another designer.
+ 
+•	User who has “Basic Developer Manager/ Basic Developer” can perform update Module Description/Variant Description/Version Description/Compatibility and Visibility in “Module Properties” tab
+ 
+•	Where can user find the new logic for module visibility/release level updates in “Module Properties” tab?
+User needs to click on “Module Legend” hyperlink in “Module Properties” tab, a pdf file will be opened in the browser where the module visibility/release level logics are defined.
+ 
+•	What are the new visibility options are added in “Module Properties” tab?
+Below are the two new options are added in “CM2P Visible” list box.
+YES-EXPIRYDATE
+This will allow module variant version visible till the expiry date. 
+Always allowed for any module variant version.
+If expiry date stated for a module variant version till that time visibility will not be updated.
+ 
+NO-EXPIRYDATE
+This is system generated visibility status (not by the user). Once expiry date crossed MPLD automatically change the NO-EXPIRYDATE status.
+ 
+•	Date picker will be enabled only when “YES-EXPIRYDATE” option is selected in “CM2P Visible” list box. It will be disabled for other visibility options (“YES”/”NO” and “NO-EXPIRYDATE”).
+ 
+
+•	Update Variant” and “Update Family  buttons are disabled in “Module Properties” tab when user selects “YES”/”NO-EXPIRYDATE” options from “CM2P Visible” list box. 
+ 
+•	To switch a module variant version status “YES”, 
+Module variant version should not contain any preferred level=”NO” components.
+Module variant version material status should be less than 82
+ 
+•	Why user is not able to update module visibility status to “NO-EXPIRYDATE” in “Module Properties” tab?
+This status will be set by the automated scheduler job once if the expiry date is crossed and not by the user. Module will be switched to invisible after the expiry date.
+ 
+•	Why user is not able to downgrade module release level in “Module Properties” tab?
+Module release level can be downgraded by only certain roles. This logic is available in “Module Legend” (click on the hyperlink in “Module Properties” tab, a pdf file will be opened in the browser where the module release level downgrade logics are defined).
+ 
+•	Why “Module Visibility Update” tab is not visible to user?
+This tab will be visible to the user who has “Basic Developer Manager” role.
+ 
+•	Which data filled with “Modules to be switched invisible” DataGrid in “Module Visibility Update” tab?
+To display the modules in DataGrid, below criteria should be met.
+Module is visible but it contains preferred level=”NO” components after 1:1 substitution.
+Module should not contain an expiry date 
+ 
+•	There are 12 filter options are available in Module Schematic à Released Modules tab. All Modules – User can be able to view all modules, All Visible Modules -- User can be able to view Only visible modules, All Visible Modules Highest Version -- User can be able to view Only visible modules with highest version of each variant, All Module Masters -- User can be able to view module masters list, All Modules Containing Search String -- User can be able to view all modules as per search string, All Visible Modules Containing Preferred Level = NO Components After 1:1 Substitution --User can be able to view all modules which contains Component (Part Name)     Preferred Level is NO after 1:1 substitution,My Modules -- User can be able to view his/her own modules, My Visible Modules -- User can be able to view his/her own visible modules, My Visible Modules Highest Version -- User can be able to view his/her own visible modules with highest version of each variant,My Module Masters -- User can be able to view his/her own module masters list, My Modules Containing Search String -- User can be able to view his/her own modules as per search string, My Visible Modules Containing Preferred Level = NO Components After 1:1 Substitution --User can be able to view his/her own modules which contains Component (Part Name) Preferred Level is NO after 1:1 substitution
+ 
+ 
+•	CIR folder structure in DG when user clicked on Open action with filter selected as “My Visible Modules Containing Preferred Level = NO Components After 1:1 Substitution”?
+ 
+•	We can open module schematic in PDF by Launch MPLD application, go to Module Schematics -> Released Module tab then choose eCAD combo box value as ‘PDF’. Then click any open schematic button (Family/Master/Variant/Version).
+ 
+•	 PADS schematic can not open in PDF, only DG Design Editor schematic can open in PDF. 
+•	Ready for layout schematic- RFL in MPL rules as follows  Current Project Variant Version owner only can set the RFL state.., All modules in CM2P and LM2P Population of selected project variant / version have Release level  > ML1 , have Visibility = YES, CM2P Population of selected project variant / version have module type = CM and LM2P =EM and All modules in CM2P Population of selected project variant / version are NOT Module Links and All   Modules have compatible Package Names for all identical Reference Designators in relevant CM2Ps/LM2Ps
+•	The function Export Part List table to excel supports following checks:   a) preferred level check of all module components in the CM2P/LM2P population   b) material status check of all module components in the CM2P/LM2P population   c) visibility check of all module schematics in the CM2P/LM2P population  
+•	The function Export Module Link and module eCAD availability to excel supports following checks:   a) eCAD availability check (PADS/Zuken) of all module schematics in the CM2P/LM2P population   
+•	 “Edit Project” tab is will visible  user who has “Application Engineer/Schematic Creator” role.
+•	Create new CM2P Variant / Update Variant Annotation buttons will be visible to the user who has “Application Engineer” role.
+•	The Application engineer role user variant/version owner can update variant /version annotation 
+•	Cache the modules and reuse cached modules in CM2P Matrix and export PDD in MPLD as follows Scenario 1: 1.Set desired project as current then navigate to CM2PàImport/Export tab 2.Click on “Copy Current CM2P/LM2P to Cache Table” button, this action will take the modules from CM2PàCM2P Matrix tab, current module list and copy to Cache table 3.Now change the current project 4.Click on “Copy Cache Table to Current CM2P/LM2P” button, this action will take the modules from Cache table and copy to CM2PàCM2P Matrix tab, current module list Scenario 2: 1.Go to CM2PàImport/Export tab, enter the module details into “ASCII Module List” in proper format Eg: ER03,BOOSTER_DRIVER,003,001,CM,CM2P 2.Click on “<<<Convert to Table” button, on this action modules from “ASCII Module List” will be added into Cache Table3. Click on “Copy Cache Table to Current CM2P/LM2P” button, this action will take the modules from Cache table and copy to CM2PàCM2P Matrix tab, current module list
+•	Import / Export tab will be visible to the user who has “Application Engineer/Schematic Creator” role.
+•	To copy the modules from cache table to current CM2P/LM2P, below criteria should be met: User should be a version owner. CM2P status should not be “Ready for Layout Schematic status”. And Modules should not contain any errors in “Info” column of cache table
+•	The purpose of “Info” column in cache table, This column contains the error message/information for the respective module.
+•	Master Family name, variant and version, Module Type and Population Type expected module format in ASCII module list of CM2P cache table Ex:ER03, ANALOG_SENSOR_INPUT_01,001,002,CM,CM2P 
+•	Request Invisible Modules From Reference Project & Reference dropdown” button buttons will be visible to the user who has “Application Engineer” role.
+•	To set  Invisible Module Project Request  with selected reference project rules as follows 1. User should have “Application Engineer” role.2 User should be a version owner of valid current project.3. Reference project should be in RFD/PD state.4. Reference project should be in ACTIVE status5. Reference project variant version release level in OP2 should be greater or equal to MLC65/F06. 6. Reference project should have invisible modules.
+ 
+•	 To view an invisible module project request status: Navigate to CM2P -> ‘Edit Project’ tab, user could see the status in project variant version grid.2. Navigate to Module Schematic -> ‘Invisible Module Project Request’ tab, to view the request status.
+•	It is not possible to associate more than one reference projects to a current project variant in “Invisible Module Project Request”?
+•	As per the rule, current project can be associated with only one reference project. If user wants to change the associated reference project, then user should follow the below steps1. Set the reference project which you want to associate with the current project.2. Navigate to CM2P -> ‘Edit Project’ tab, select the reference type (RF1/RF2/RF3/RF4)3. Click ‘Request Invisible Modules From Reference Project’ button.4. Popup window will be displayed with detailed information where click ‘Yes’ button to withdraw the existing request and new request will be submitted with selected reference project.
+•	Invisible module project request workflow or steps as follows:  Set the reference project which you want to associate with the current project.2. Navigate to CM2P -> ‘Edit Project’ tab, select the reference type (RF1/RF2/RF3/RF4) 3. Click ‘Request Invisible Modules From Reference Project’ button.4. Popup window will be displayed with detailed information where click ‘Yes’ button to withdraw the existing request and new request will be submitted with selected reference project.
+•	User cannot resubmit the reques which was rejected t but user can request ‘Basic Developer Manager’ to approve again. ‘Basic Developer Manager’ has an option to approve the rejected request. 
+•	User cannot resubmit the request which is in ‘Withdraw’ status. User need to create another version for current project variant and then select reference project to submit the request.
+•	‘Invisible Module Project Request’ should be in ‘Approved’ status for current project variant version to view the invisible modules in CM2P Matrix tab. 
+•	To copy invisible modules from cache table to current CM2P/LM2P  ‘Invisible Module Project Request’ should be in ‘Approved’ status for current project variant version. In cache table ‘Info’ column should contain text ‘Module visibility is No – Approved’ for the approved invisible modules.
+•	To perform Ready for Layout Schematic’ with invisible modules ‘Invisible Module Project Request’ should be in ‘Approved’ status for current project variant version to perform Ready for Layout Schematic.
+•	In the CM2P Matrix tab, within the Type/Variant/Version grid, module visibility is displayed in days to indicate the duration for which a module remains active or accessible. This approach is particularly useful in systems where modules have time-bound relevance, such as in product lifecycle management or configuration management scenarios.
+•	To open a schematic (Family / Variant / Version) in PDF format, launch the MPLD application, navigate to the 'Current Settings' section, and select the 'Application' tab. Within this tab, choose the 'Open Schematic Mode' option and click on the 'Set Application Data' button to apply the changes. Next, go to the 'CM2P Work Package' and access the 'CM2P Matrix' tab. From there, select the desired DG schematic corresponding to the specific Family, Variant, and Version. The selected schematic(s) will then open in PDF format for viewing.
+•	The "Component Feedback" feature in CM2P plays a crucial role in the risk assessment process during the transition of a design to the Ready For Layout (RFL) stage. When an Application Engineer sets a CM2P to RFL, the system automatically evaluates the components used within the design. If any components have a Preferred Level marked as "NO" or possess a Material Status of 82 or higher, or if the Material Status is greater than 0 but less than 80, the system triggers a risk assessment email. This email alerts the Component Engineering team to potential issues with the components selected. The Component team then downloads the risk assessment data, reviews the flagged components, and provides feedback on their suitability or suggests alternatives. This process ensures that only approved and reliable components are utilized in the design, thereby maintaining quality standards and mitigating potential risks in the product development lifecycle.
+•	Risk assessment email will be generated if CM2P contains components with Preferred Level = NO or with Material Status >= 82 or (Material Status > 0 and Material Status 80)
+•	Layout Schematic” menu button will be visible to the user who has “Schematic Creator” or “Series Developer” role.
+•	Why modules section is empty on click of “Show LM2P Modules” button in “CM2P Collection” tab? LM2P population modules were not added in the selected project variant version.
+•	The "Lock CM2P/Prepare Generation Data" button in the CM2P interface may be disabled due to two primary reasons: firstly, if the user has not generated the delta for a new layout schematic in the "Basic Schematic" tab, which is essential for capturing changes between schematic versions; and secondly, if there are unresolved package mismatches identified in the "Mismatches" tab, indicating inconsistencies in component or package data that need to be addressed before proceeding. Ensuring that the delta is generated, and all mismatches are resolved will enable the button, allowing the user to lock the CM2P and prepare the generation data.
+•	If an exported layout schematic is not appearing in the grid within the CM2P interface, it is likely because the user has not clicked the "Refresh Table" button. This action is necessary to update the grid and display the most recent exported layout schematics. Without refreshing, newly exported schematics may not be visible in the grid.
+•	The "Check Release Status" button in the layout schematic section becomes enabled when two conditions are met: the user must select a row in the exported layout schematics grid, and the selected row must not contain any errors. This ensures that only valid and error-free schematics are considered for release status checks.
+•	The "Remove" button in the layout schematic section becomes enabled when a user selects a row in the exported layout schematics grid. This functionality ensures that only the selected schematic can be removed, preventing accidental deletions.
+•	The "Release Schematic as Version From" dropdown in the "Release Status" tab of the layout schematic becomes enabled when two conditions are met: the user has performed a "Check Release Status" action in the "Exported Layout Schematics" tab, and the selected schematic passes this check without any errors. This ensures that only validated schematics are available for version release, maintaining data integrity and compliance within the CM2P system.
+ 
+•	The Release/Update button in the Layout Schematic section of the Release Status tab remains disabled unless two specific conditions are met: Error-Free Release Status: The schematic must pass the release status check without any errors. Selection from Dropdown: The user must select a value from the "Release Schematic as Version From" dropdown. These prerequisites ensure that only validated and appropriately sourced schematics are released or updated, maintaining the integrity of the design process.
+•	Compare Schematic button will be enabled  when User should select a row in the exported layout schematics grid. And Selected row must not contain any errors. 
+
+•	Set Layout Schematic as FINAL button is visible for Schematic Creator (SC) role
+•	Set Layout Schematic as FINAL rules as follows Variant of current project should be selected in “Hardware Variants” tab and Layout Schematic (SC) state should be in DRAFT mode for the selected hardware variant.
+•	Export Project Schematic Part List to Excel button is disabled Due to In Hardware Variants tab, selected variant status is other than 'PD'.
+•	Export Project Documentation is possible when the project status should be 'RFD/PD/(PD)
+•	User should have Schematic Creator (SC) role to perform Separate Highlighted CM2P from Layout Schematic and for those user this button will be visible
+•	The “Separate Highlighted CM2P from Layout Schematic” button is disabled unless two conditions are met: Variant Selection: The user must select a variant in the Hardware Variants tab. Multiple CM2P Populations: The associated CM2P population in the layout schematic grid must contain more than one entry. These criteria ensure that the separation action is meaningful and applicable, preventing errors in the design workflow.
+
+•	The “Associate CM2P Population to Layout Schematic” button becomes enabled when the following conditions are met: Variant Selection: The user must select a variant in the Hardware Variants tab. Error-Free Task Status: Upon clicking the “Check if assignment of selected reference (RFx) to Layout Schematic is possible” button, the task status grid is populated with check results. If this grid does not contain any errors, the “Associate CM2P Population to Layout Schematic” button is enabled. These prerequisites ensure that only valid and compatible CM2P populations are associated with the layout schematic, maintaining the integrity of the design process.
+•	The “Set Ready for Documentation” button in the Ready for Documentation tab becomes visible when the following conditions are met: Variant Selection: A variant must be selected in the Hardware Variants tab, and its status should be set to 'open'. Readiness Check: Clicking the “Check if Ready for Documentation for Highlighted CM2P is Possible” button initiates a series of checks. Error-Free Task Status: If the task status grid displays no errors after the checks, the “Set Ready for Documentation” button will become visible, indicating that the CM2P is ready for the documentation process. This workflow ensures that only validated and ready components proceed to the documentation stage, maintaining the integrity and accuracy of the design process.
+•	The “Undo Ready for Documentation” (RFD) button in the Ready for Documentation tab becomes visible when the following conditions are met: Variant Selection: A variant must be selected in the Hardware Variants tab, and its status should be set to 'RFD/PD' (Ready for Documentation or Production Design). Readiness Check: Clicking the “Check if Ready for Documentation for Highlighted CM2P is Possible” button initiates a series of checks. Error-Free Task Status: If the task status grid displays no errors after the checks, the “Undo Ready for Documentation” button will become visible, allowing the user to revert the CM2P status from Ready for Documentation. This workflow ensures that only validated and ready components proceed to the documentation stage, maintaining the integrity and accuracy of the design process.
+•	Open LS (SC) - PDF  button will be disabled in either of below scenarios. 
+User did not select any variants of current project in “Hardware Variants” tab or Selected any variants of current project in “Hardware Variants” tab will be  eCAD type as PADSDxDesigner. Or If no SC schematic released for the selected variants of current project in “Hardware Variants” tab.  
+ 
+•	Only Schematic creator can update layout schematic description if it is in FINAL state.
+•	Only Series Developer can update layout schematic (PE / LC) description.
+•	The selected project variant and version does not contain any project releases.
+
+•	Prepare Generation Data  button is disabled in project documentation due to  User forgot to generate delta for layout schematic in “Generate Project Schematic / Documentation” tab or If any mismatches found in “Mismatches” tab.
+ 
+•	28-5xxxx-xxxx-2 or 28-5xxxx-xxxx-3  is the pattern of Project Schematic Identifier (Circuit diagram number#) accepted in Project Documentation
+•	Generate project schematic in PDF as follows: 1. Go to Projects, select the "project" from dropdown and Press "Set as Current" button.2. Navigate to Variant Manager and select the hardware Variants item then go to "Schematics" tab and click on "Generate Project Schematic (SC/PE/LC)" button. 3. Click on "Generate Delta" button then verify "Delta list and Mismatches" and Go to Generation tab and click on "Generate Project Schematic in PDF" button then opens schematic file automatically in PDF format
+
+•	Functions artifact type should be of type 'HEADING'.
+•	This should be done for testing.
+•	Only the functions, function variants which leads to the creation of 
+•	Circuit module groups will be created in MPL. other will be created only in DOORSNG
+•	PDD creation and updates
+a.	Initially the new PDD Group is always Private. 
+b.	User gives a PDD Name for that PDD Group. 
+c.	He selects creation of a new PDD Variant or Version.
+d.	If button "Create PDD Group" is pressed, MPL will define a unique PDD ID Number or Version. 
+e.	Once a new Version was created the PDD Data of the former Version is carried over to the new Version
+f.	This adds an entry in PDD Group List.
+g.	On selection in PDD Group List the data in Selected PDD Group and in Layout Schematic Info is filled and can be edited.
+ 
+•	User adds the Layout Schematic Information For details see: Layout Schematic Information
+a.	Grouping of Projects to the Layout Schematic
+b.	Responsible in Circuit Management Team (Schematic Creator, Circuit Manager Schematic, Circuit Manager Design 1 / 2, Application Engineer)
+c.	Base Layout Schematic
+•	User updates the (still private PDD) and adds all relevant information by copy from former Project PDDs and by
+a.	entering modifications in Function and Module selection 
+b.	editing comments
+c.	Reset of Review columns if a completely new review is intended
+•	Publish PDD: 
+a.	MPL make the PDD ID + PDD Name visible in all MPL Applications (of the same Master).
+b.	MPL prepares the E-Mail 
+i.	(and sends) it to either Publisher of PDD     --  or --- 
+ii.	to all reviewers (best way needs to be decided)
+•	Tasks executed within LDC to completely define the PDD for the projects. 
+a.	Module and Function Review is started triggered by Step #5
+b.	Common Review Meetings are started.
+c.	The Function and Module Selection is completed.
+•	Copy the (F)CM2P per Project from the PDD to the CM2P.
+•	CM2P is set to RFL, this will set the PDD of the Project to Read Only except for LSP Review and for Developer Comments.
+a.	To be clarified: Do we block the complete PDD Group or only the individual PDD Data of the Project that was set to RFL?
+ 
+•	Optional: RFL is undone, this will enable editing of the PDD again. Undo RFL still only possible of there has no Layout Schematic Generation happened for the PDD.
+•	PDD is archived: After closure of the Project the PDD is archived.
+a.	A text Box is available to give a comment for archive (mandatory). There is a Button to Archive the PDD.
+b.	PDD will be hidden from the PDD List on Manage PDD Page. If the user likes to see older PDDs there is a Button to remove the filtering and list all active PDDs.
+•	LDC Board works as follows: 1. Application Engineer requests a new LDC.2. Board members take up the request and estimate a possible timing.3. One week later the timing will be confirmed.
+
+•	CM2P Release Process includes as follows:1. Each Circuit Management Team member assures that the design is completed. 2. It checks the CM2P and gives a release recommendation.3. If all Circuit Management Team members have approved the CM2P it can be set to RFL by the Application Engineer.
+•	The LDC Kickoff Meeting involves discussions on project requirements, including documentation such as new project requirements, system architecture, function variants, timing, and risks. Participants typically include the Circuit Management Team—comprising the Application/Base Project Lead, Schematic Creator, Boehmer, Marcks—and the Function Developers. Following this, the Development Kickoff Meeting is held, where the function, architecture, and requirements are officially handed over to the module development team, marking the start of electronic design activities along with a presentation of the project timeline.
+•	The Module Development phase focuses on developing electronic circuits based on the defined architecture, function variants, and requirements. As part of this process, circuit modules are created and provided within the Master Part List (MPL) system.
+•	The LDC Closure process begins with each Circuit Manager formally verifying that all activities within their area of responsibility are fully completed. A formal meeting is then conducted to approve the official closure of the project. This is followed by a retrospective to evaluate the overall LDC workflow and the documentation of any identified workflow improvements for future reference.
+•	The Functional Module Concept is based on the principle that circuit modules are often combined with other modules to realize a complete function—for example, combining CAN_INTERFACE_AA_01_REV15.001 with CAN_TRANSCEIVER_01.001. A function variant will only fulfill its requirements if a valid and verified combination of modules is selected. This concept enables the documentation of such validated circuit module combinations in the MPL database to define complete function variants. For projects requiring ASPICE certification, adherence to the Functional Module Concept is mandatory, along with comprehensive requirements documentation in DOORS NG. Within the MPL system, users can select between Modular Projects, which use only circuit modules as in CM2P/LM2P, and Functional Projects, which apply the Functional Module Concept, where FCM2P/FLM2P includes both the function variant and the associated module selection.
+
+•	In the Functional Module Concept, when a new function or module group is created in MPL, it is automatically synchronized to DOORS NG through a one-way synchronization process—from MPL to DOORS NG. While the module group itself is transferred, the individual modules attached to the group are not copied to DOORS NG. Any renaming performed in MPL is reflected in DOORS NG as well. MPL continuously compares its data structure with that in DOORS NG, and if any inconsistency is detected, an automated email notification is sent to the user. Additionally, specific prefixes such as FUNC_, VAR_, and CMG_ are added only within DOORS NG to distinguish different elements.
+
+•	To achieve ASPICE certification, project development must be based on robust requirements management in DOORS NG. Requirements must be assigned specifically to Function Variants and Module Groups through traceability links (traces) within DOORS NG. Requirements are not to be assigned to Function Groups, Functions, or individual Circuit Modules. All requirements are documented exclusively in DOORS NG, not in MPL. During the Development Kickoff Meeting, these requirements are formally handed over to the module development team. The official commissioning (Beauftragung) of module development is based on the requirements that are assigned to the corresponding Function Variants.
+
+•	A Module Group in the Functional Module Concept defines the specific combination of circuit modules required to realize a particular Function Variant. For a single Function Variant, multiple Module Groups can exist, each representing different design requirements or alternative design realizations. The selected Module Group determines the population of modules in both the FCM2P and FLM2P representations within the MPL system.
+•	In the Functional Module Concept, a Module Group can exist in several lifecycle states that govern its usage and visibility within the MPL system. When marked as Visible, the Module Group is displayed on the FCM2P page of MPL and can be selected by the Application Engineer. Visibility is set by the Function Developer and also depends on the visibility of the individual circuit modules within the group. Even if a Module Group is Invisible, it may still be used in a project, provided that the contained modules are visible or an approved request for using invisible modules exists. By default, Module Groups are set to Visible. A Module Group is considered Approved once it has been reviewed by the Function Developer and is confirmed to fulfill the requirements defined in DOORS NG for the associated Function Variant and Module Group; the default state is Unapproved. Additionally, a Module Group can be Deactivated to prevent further use, in which case it can no longer be used in FCM2P/FLM2P, and the RFL (Request for Layout) is blocked. When a Module Group is deactivated, an email notification is sent to the FCM2P owner. The default state for usage is Activated.
+•	When implementing the Functional Module Concept, specific technical rules must be followed to ensure correct and consistent naming of Function Groups, Functions, and Function Variants. First, all names must be unique—a name assigned to a Function Group, Function, or Function Variant must not be reused in any other context. Additionally, names must be distinct from Circuit Module names to avoid conflicts. Only alphanumeric characters and underscores (A–Z, a–z, 0–9, _) are allowed; special characters such as spaces, hyphens (-), and dots (.) are not permitted. Furthermore, each name must begin with a letter, which supports easier search and replace operations across documentation platforms like Office, DOORS NG, and Feature Models.
+
+•	If you are unable to export data to Excel from MPL, a common fix involves repairing the Microsoft Office installation. Start by typing “Control Panel” in the Windows search bar and opening the Control Panel. Set the view to “Category”, then click “Uninstall a program” under Programs. Locate and select “Microsoft Office 365…” in the program list, then double-click “Change”. When prompted by Windows asking for permission to allow changes, click “Yes”. In the repair options, select the “Quick Repair” radio button and click “Repair”. A confirmation popup will appear saying, “Ready to start a Quick Repair?” — click “Repair” again to start the process. Once the repair is in progress, wait until it completes and a message pops up stating “Done repairing!”. Click “Close” to finish. After completing these steps, you can restart the export feature in the MPL application, which should now work correctl
+
+•	ECDM – Electronic component Data Management. In this database order code, supplier details, ECDM nomenclature, plant details are kept. Designer searches component in ECDM and get the A2Cxxxxx number and also he can find Zuken part number.
+•	Checks performed in Plugin -
+1.	While we are trying to export schematic into MPL, few checking is performed such as whether path (which is visible at the top left corner of the DG) defined in the DG or not.
+2.	Also it checks whether Schematic is closed or not. That means an open schematic can’t be exported. It will be shown as a locked. Why it is checked because user may change the schematic but has not saved it and he tries to export it. So to export modified record, schematic is kept in locked if it is still open and if user try to close it, a pop will ask to save it and then it will be saved. 
+3.	Another check is credential of the user verification.
+
+
+
+•	Open All available description button– It gives all description of all circuit modules and will be picked up from database. All description means Circuit module master description, variant decryption, version description.
+•	Open All Modules button – only for Michael Braumann and super user. It gives all modules. Why is that require? Because we need to protect our data. If it is available for all, any user can download it and take it into a memory stick and can transfer to other company. To protect that it is restricted. That is the reason, some buttons are only available for trusted user.
+•	Open family button – It opens all modules which are under the selected module in the application. That means if user select ‘ANALOG_SENSOR_INPUT_01’, then it will show all modules variant and version which are under this module ‘ANALOG_SENSOR_INPUT_01’. All visible, invisible modules will be shown.
+•	All master modules have been shown in application as 0 variant and 0 version. But originally in DG, it is mentioned MAST ER that means ‘MAST’ means variant and ‘ER’ means version. In Mentographics it was full word MASTER.
+•	MASTER declares which component belongs to which family. At the end, reference designator is relevant to MPL DB. Module master is the reference for all variant master. You can create new variant deleting component from the master or changing the value of the component. Master Module is logic of all variant that means Master module is the 
+•	If we create variant we have to check whether theoretically Net list are equal or not with the Master.
+•	Module Matrix Button – This is a view for Module designer, which gives BOM compare. In the left first row is the reference designator of the selected module of the application which is compared with all other variant of that circuit module.
+•	Open variant button – means all versions for that variant will be opened.
+•	Open Version button – Selected version under selected variant will be opened. This button location must be under the Type field. Because it also reflects the CM or EM type of the module.
+•	Update Variant and Update Family button -Designer works Project per Project. And in the Project generally same module few variants are used. So if they want to update at a time below values as shown in the image they can do it selecting the check boxes and pressing update button. It will update whole variant or whole family. Sometimes follow up module is created from existing module and all old module family must be disabled. With this button it can be easily disabled setting visible No.
+•	Show Project Button – will display all projects where the selected Circuit Module is used.
+•	Show Component Button – will display all components(Bill of materials) which are in the selected Circuit Module.
+•	Show Proposed Replacement Button – It Shows the update defined in the preferred part list.
+Preferred Part list is centralized document valid for all circuit modules. It defines which component will be used for VED Product. Frankfurt, Ingolstadt, Sibiu has team who worked together for the Preferred Part List. Some components are phased out by supplier or some component has production issues or some new components with better features are available or some has soldering problems or some could not complete life time then Preferred part list table is modified with setting part number to NO that blocks use that component in new design.
+•	When a product is released then it transferred from development team to Quality team. If there is a issue quality team will check whether it is a  issue  for  single unit or an issue for multiple unit with different type. Then they inform development team and then development team phased out all the component setting it to NO. Message number 5 is generated showing components which are NO.
+•	If any one component of a Circuit Module has NO component we can’t use that Circuit Module.
+•	Material status is set to 80 when it is brought out. But if the component is phased out we set the material status to 90.  And then Ingolstadt team set the component to NO in the excel sheet for that component and upload it in the MPL.	
+•	If any component for a circuit module  is missing in the Preferred Part List table, message number 4 is generated and send to the component team
+
+
+•	Topology defines the connections between components within a Circuit Module (CM) as well as the connections to other CMs. Each component consists of multiple pins, with each pin having a specific designation on the component—for example, component R4711 has pins 1 and 2. The topology includes all node information for the module, detailing how these pins and components are interconnected.
+•	A Circuit Module (CM) represents a defined portion of a schematic, following the approach of splitting the overall schematic into smaller, manageable pieces. In the DG schematic system, all schematics within a master design (such as ER03 exclusive or CAirS) maintain a unique and consistent numbering for component positions—meaning a specific component always has the same reference designator if it occupies the same position across schematics. Each Circuit Module fully defines a segment of the schematic, including its topology (connections) and Bill of Materials (BOM). Key elements within a CM include the Reference Designator, which identifies the component’s position in the design, and the Part Name, which serves as a unique key linked to the Zuken Library. This linkage provides all technical parameters and logistics information for the component, including the Package Name that defines its footprint and the CSE PDM Part Number, which connects to the logistic ID in the SAP system. The part number also represents the contractual relationship between Conti purchasing and the supplier.
+•	The Module Schematics Workflow begins with the creation or update of the master schematic, followed by its release in MPL. Next, a variant is created or updated and then released in MPL to the ML1 stage. The module developer performs a correctness check before the schematic is further released in MPL to the ML3 or MP4 stage. Afterward, module compatibility information is added, along with the module description. Finally, when the module is phased out, its visibility is changed to invisible.
+•	In MPL, the module schematics undergo several important checks to ensure consistency and correctness. Each component within the module schematic must align with the ZCOMPDB database. Reference designators follow a specific format: they begin with a capital Latin letter Y as a prefix, followed by either a 4-digit unsigned integer between 0000 and 9999, or a single digit z between 1 and 9 (without zero). All components are assigned a preferred level of High, Medium, or Low, with none causing errors. Material status for components must be less than or equal to 80, as defined in the X-Plant Material Status documentation. There must be no duplicate IDs in the Property Viewer. Each network connection (NetCon) has both an ON and OFF definition in the Accept Net, a feature implemented post-migration. The MPL_CM_MASTER must be listed in the masters such as ER03 or CAirS, and the MPL_CM_SCHEMATIC type is defined as MODULE. Comments for the module include tags such as MPL_CM_VARIANT, MPL_CM_VERSION, MPL_CM_TYPE, and MPL_CM_NAME, while the MPL_CM_REF_PRIORITY is color-coded as RED, ORANGE, YELLOW, BLUE, or GREEN to indicate priority levels.
+
+•	The master schematic must include all reference designators defined across all variants, versions, and types within its family, excluding those components listed in the Exception Table. The MPL_CM_VARIANT is set to MAST, the MPL_CM_VERSION is identified as ER, and the MPL_CM_TYPE is specified as CM.
+
+•	The module schematics variant and version checks require that all general checks have passed and that the master schematic contains every reference designator defined in the module. The MPL_CM_VARIANT must be a positive unsigned integer with three digits, allowing gaps. Similarly, the MPL_CM_VERSION is a positive unsigned integer with three digits, but versions must be consecutive starting at 001. The MPL_CM_TYPE can be either CM or EM. All net labels defined in the version must also exist in the master, a feature implemented after migration. Links between modules are defined by several attributes: MPL_CM_REF_NAME, MPL_CM_REF_VARIANT (three-digit unsigned integer allowing gaps), MPL_CM_REF_VERSION (consecutive three-digit unsigned integer starting at 001), and MPL_CM_REF_TYPE (either CM or EM). The referenced module must exist. If a variant, version, or type already exists, it can be updated only if the topology and netlist are identical, overwritten if the module is unused (not selected in any CM2P), or otherwise the release is denied.
+
+•	The Modular Concept Project (CM2P) enforces several rules to ensure readiness for layout schematic release (RFL). Each project variant version is associated with a version owner. Within CM2P and LM2P populations, multiple module selections are allowed (MNVVT), including multiple selections within a module family (MN). Double module selection rules apply to both CM2P and LM2P populations. Modules in the CM2P population must be of type CM. The populations also enforce module linking, availability in Zuken, and require modules to be released beyond the ML1 stage. Modules must have their visibility set to YES, RFL status as NO, and be marked as ACTIVE. Additionally, reference designators and package information must be consistent across all module schematics within the relevant CM2Ps and LM2Ps to avoid mismatches.
+						
+
+
+•	The Functional Module Concept Project (FCM2P) enforces specific rules to ensure readiness for layout schematic release (RFL). Each module variant must have a defined function variant, and multiple function variants from the same function are not permitted. Double module definitions are disallowed, and the same set of module chains cannot appear more than once within the same function variant as a CM2P or LM2P. Module groups in a deactivated state are not allowed, and empty function variants are prohibited. The system performs existence checks for function groups, functions, function variants, and module family names to ensure data integrity. Empty project tags are not allowed, and duplicate module selections within a single modular chain are prevented to maintain consistency and correctness.	
+
+•	Set layout schematic as FINAL rules in MPL/MPLD
+•	Layout Schematic - Layout Schematic SC Owner
+•	Layout Schematic SC - status = DRAFT
+
+•	Circuit Module Master Defines the components which are part of the circuit module family
+And Defines general topology of the circuit
+•	Circuit Module Variant Defines the parts that have to be populated in series production
+And Defines the SAP Partnumber of each component as reference to supplier specification
+•	Circuit Module Version Defines updates of the corresponding Variant And Reference to Variant/Version of an other Circuit Module
+•	Circuit Module Types Circuit Modules (CM):  Define complete circuitry for population and Extension Modules (EM):  Define optional components to be prepared in the Layout without population.
+•	How to set export schematic password to enable export schematic feature in plugin? 
+1.	Launch MPLD application, go to Current Settings -> Database tab then enter new password and confirm password and click on ‘Set Password’ button 
+•	To switch to another database in MPLD, launch the MPLD application and navigate to Current Settings → Database tab. There, select the desired database and master, then click the Set Environment button. The application will prompt you to relaunch, and once restarted, it will connect to the selected database.
+•	To find user roles in MPLD, launch the application and navigate to Current Settings → Database tab, then look under the Permission section. To set the Excel export format, go to Current Settings → Application tab, select the desired Excel Export Mode, and click the Set Application Data button to save the changes.
+•	To set the default selection of the project source in MPLD, launch the application and go to Current Settings → Application tab. Then select the desired Project Source and click the Set Application Data button to apply the change.
+•	To find the installed Zuken software information in MPLD, launch the application and navigate to Current Settings → eCAD tab.
+
+•	The “Set Layout Schematic as FINAL” button is invisible unless the user has the Schematic Creator (SC) role. It is enabled only when the variant of the current project is selected in the Hardware Variants tab and the Layout Schematic state is in DRAFT mode for that variant. The “Export Project Schematic Part List to Excel” button is disabled if the selected variant’s status in the Hardware Variants tab is anything other than PD. Similarly, the “Export Project Documentation” button is disabled unless the selected variant status is RFD, PD, or (PD). The “Separate Highlighted CM2P from Layout Schematic” button is also only visible to users with the Schematic Creator (SC) role.
+
+•	To set the open schematic mode (DG or PDF) in MPLD, launch the application, navigate to Current Settings → Application tab, select Open Schematic Mode, and click Set Application Data. This setting affects only the CM2P work package.
+•	The “Separate Highlighted CM2P from Layout Schematic” button is enabled when a variant of the current project is selected in the Hardware Variants tab and the associated CM2P population linked to the layout schematic grid contains more than one CM2P entry.
+•	The “Associate CM2P Population to Layout Schematic” button becomes enabled after clicking “Check if assignment of selected reference (RFx) to Layout Schematic is possible” and if the task status grid shows no errors.
+•	The “Set Ready for Documentation” button in the Ready for Documentation tab is visible if a variant with status ‘open’ is selected in Hardware Variants tab and after running the relevant check with no errors found.
+•	The “Undo Ready for Documentation” button appears when a variant with status ‘RFD/PD’ is selected and the check for readiness returns no errors.
+•	The “Open LS (SC) - PDF” button is disabled if no variant is selected in Hardware Variants, or the selected variant uses the eCAD type PADSDxDesigner, or if no SC schematic is released for the selected variant.
+•	The “Open LS (PE) - PDF” button is disabled if no variants of the current project are selected in the “Hardware Variants” tab, if the selected variants use the eCAD type PADSDxDesigner, or if no PE schematic has been released for the selected variants. The associated project releases grid in project documentation is empty because the selected project variant and version do not contain any project releases. The “Prepare Generation Data” button is disabled if the user forgot to generate the delta for the layout schematic in the “Generate Project Schematic / Documentation” tab or if any mismatches are found in the “Mismatches” tab.
+
+•	The accepted pattern for the Project Schematic Identifier (Circuit diagram number#) in Project Documentation is either 28-5xxxx-xxxx-2 or 28-5xxxx-xxxx-3, where "x" represents digits.
+
+•	To generate a project schematic in PDF format, first go to Projects, select the desired project from the dropdown, and click the "Set as Current" button. Then navigate to Variant Manager, select the hardware Variants item, go to the "Schematics" tab, and click on the "Generate Project Schematic (SC/PE/LC)" button. Next, click the "Generate Delta" button, verify the "Delta list and Mismatches," then go to the Generation tab and click the "Generate Project Schematic in PDF" button, which will open the schematic automatically in PDF format. Ensure the eCAD type is not PADSDxDesigner and that a PE schematic has been released for the selected hardware variant.
+
+•	Only the Schematic Creator can update the layout schematic (SC) description if it is in the FINAL state, while only the Series Developer is authorized to update the layout schematic (PE/LC) description.
+
+ 
+•	To request new user access for MPLD, open the MPLD New User Request page at http://fr05941vma.automotive-wan.com:8086/, select the appropriate Request Type (MPL for ER03 MPL access, MPLCairs for CAIRS MPL access, MPLtest for ER03 MPL Test access, or eCad for Zuken access only), enter any comments, and then click submit. Once the request is approved by the MPL admin, the user will be granted access to MPLD.
+•	SAP Mismatch Modules overlap: Two Modules in the CM2P define the same component, For the same component two different SAP Partn umbers are defined in the two modules. A generation of the schematic is not possible MPL creates an error
+•	Package Mismatch Modules overlap: Two Modules in the CM2P or LM2P define the same component, For the same component two different Packages are defined in the two modules, A generation of the schematic is not possible MPL creates an error
+•	Population Mismatch Modules overlap: Two Modules Masters of Modules used in the CM2P define the same component, In the variants there are different populations for the same components defined. A generation of the schematic is not possible MPL creates an error
+•	Master Part List (MPL) tool can be used with or without the Zuken tool, depending on the user needs
+•	Where can I find user guide of Master Part List application ?  A full documentation of the MPL application is available in SharePoint.
+https://continental.sharepoint.com/teams/team_10028384/Shared%20Documents/Forms/AllItems.aspx?cid=ec2933ff%2Dfef1%2D4bdb%2D9d8a%2D6ade5c59fef2&FolderCTID=0x0120000053E5521214A441A172A81BE6F6603D&viewid=c293593f%2D21cf%2D4a08%2D9b01%2D57aaa0a23a9d&id=%2Fteams%2Fteam%5F10028384%2FShared%20Documents%2FMPLD%5FDocumentation%2FUserGuide  
+•	Schematic Export in MPLD includes the Bill of Material with all component attributes, complete netlist, native schematic files for viewing or editing, and schematic metadata such as module name, variant, version, type, master, and urgency. During release, multiple checks ensure data integrity and compliance: consistency verification against CompDB/ZCompDB for component attributes (like ECAD_ID, SAP_PN, Part Type), formal netlist error detection (e.g., duplicate component instances), technical identity checks for module updates, and confirmation that the schematic is a subset of the Module Master. It also verifies consistency with assigned CM2Ps to ensure layout/project schematics cover all relevant circuit modules, automates CM2P assignments via unique IDs, checks SAP material status and preferred component usage (blocking release for disallowed statuses), and enforces user permission controls based on roles and group management.
+
+•	Add Projects to PDD in MPL
+1.	Select Projects menu from MPL menu bar
+2.	Select a project variant version from the Projects table
+3.	Click ‘Add to PDD’. Project will be added to PDD details
+4.	If any projects needs to be removed, select project in the combo box, click ‘Remove PDD’ button.
+•	Create PDD Group Variant
+1.	Select PDD menu from MPL menu bar
+2.	Load selected project from PDD details header by clicking ‘Import from PDD Details’.
+3.	Enter PDD Group name in the input area.
+4.	Create a PDD Group Variant by clicking ‘Create PDD Group’. 
+•	Create PDD Group Version
+1.	Select PDD Group Variant from the first table.
+2.	Click ‘Edit’ button, MPLD will enter edit mode.
+3.	Modify Project details in Projects tab and CM2P tab.
+4.	Change the group type from the drop down to version.
+5.	Create a PDD Group Variant by clicking ‘Create PDD Group’. 
+•	Modify PDD Group Version
+1.	Select PDD Group Variant from the first table.
+2.	Click ‘Edit’ button, MPLD will enter edit mode.
+3.	Modify Project details in PDD tab, Projects tab and CM2P tab.
+4.	Update a PDD Group Variant by clicking ‘Update’. 
+•	Change PDD Group State
+1.	Select PDD Group Variant from the first table.
+2.	Click ‘Publish’ button, PDD Group will be published.
+3.	Click ‘Archived’ button, PDD Group will be archived.
+4.	Click ‘Unarchived’ button, PDD Group will be unarchived.
+•	Load PDD data
+1.	Select PDD Group Variant from the first table.
+2.	Click ‘Technical Definition’ tab header
+•	Add Functions to PDD Technical Definition
+1.	Select CM2P or LM2P cell of respective project which you want to add data.
+2.	Go to Function Selection Panel.
+3.	 Select Function Group/ Function/ Function Variant.
+4.	Click ‘Add Functions’.
+•	Update Functions in PDD Technical Definition
+1.	Select a function data in the PDD table
+2.	Go to Function Selection Panel.
+3.	Select Function Group/ Function/ Function Variant.
+4.	Click ‘Update Functions’. Selected function will be updated with new function
+.3	Remove Functions 2.3.1 Select a function data in the PDD table 2.3.2 Go to Function Selection Panel. 2.3.3 Select Function Group/ Function/ Function Variant. 2.3.4 Click ‘Remove Functions’. Selected function will be removed along with modules.
+Add Modules 2.4.1 Select CM2P or LM2P cell of respective project which you want to add data. 2.4.2 Go to Module Selection Panel. 2.4.3 Select Module-Variant-Version. 2.4.4 Click ‘Add Modules’.
+
+•	Remove Modules 
+1.	Select CM2P or LM2P cell with population of respective project which you want to add data. 
+2.	Go to Module Selection Panel. 
+3.	Click ‘Remove Modules’.
+•	Function PDD data update 
+1.	 Select a row with function data. 
+2.	Go to ‘PDD Check’ Panel. 
+3.	Select PDD Check or Enter comments in Function PDD Check section 
+4.	Click ‘Update’. All the rows belongs to selected function will be updated with entered PDD data
+•	Module PDD data update 2.7.1 Select a row with module data. 2.7.2 Go to ‘PDD Check’ Panel. 2.7.3 Select PDD Check or Enter comments in Module PDD Check section 2.7.4 Click ‘Update’. Selected rows will be updated with entered PDD data
+
+•	LSP data update 2.8.1 Select a row with module data. 2.8.2 Go to ‘LSP Review’ Panel. 2.8.3 Select LSP Checks or Enter comments in LSP Review panel. 2.8.4 Click ‘Update’. Selected rows will be updated with entered PDD data.
+
+•	Module Properties 2.9.1 Select a row with module variant version. 2.9.2 Go to ‘Module Info’ Panel. 2.9.3 Module properties will be shown in the table
+•	Cell Editing • PDD can be modified directly with cell editing feature. • Select a cell and double click it. • Cell will be entered into editing mode. • User can modify data and click enter to save those modification
+•	Module Group calculation • MPLD will calculate for module group on all modification • For a combination of function and modules, if module group exist, then module group will be restored. • If module group is deactivated, then module group number will be marked in red text • If module group is invisible, then module group number will be marker in greyed out
+•	PDD Color calculation • MPLD will calculate for errors and warnings • If any error presents in the PDD, it will be highlighted in colors • For every change, colors will be calculated and applied • On mouse over the error, error details will be shown in a tool tip
+•	PDD Copy from version to version 2.13.1 Select a required project variant version and do ‘Set as Current’. 2.13.2 Select a project variant version where PDD data that needs to be copied. 2.13.3 Perform ‘Copy PDD Data’.
+Note: On successful copy, all older version will be blocked for editing. New version needs to be created for further modification
+•	Import PDD data to CM2P/FCM2P 2.14.1 Select a required project variant version and do ‘Set as Current’. 2.14.2 Go to CM2P/FCM2P matrix in CM2P tab. 2.14.3 Perform ‘Copy from PDD’
+Note: On successful copy, PDD data will be locked partially. Only PDD checks and comments can be modified
+•	Request Invisible Modules from Reference Project” is used to submit a request for the selected legacy reference project for the usage of invisible modules in current project variant version.
+•	Invisible Modules usage from Legacy projects or Invisible module request creation in MPL
+•	Pre Conditions for Invisible Module Project Request
+1.	Requester should have 'Application Engineer' role
+2.	Requester should be a version owner
+3.	Reference Projects Should be in RFD/PD state
+4.	Reference Project Should be ACTIVE
+5.	Reference Project Release level in OP2 should be >=MLC65 or >=F06
+6.	Reference project must have invisible modules
+•	To raise a request for using invisible modules from legacy projects, the user first starts the MPL application and creates a new CM2P variant version as a carryover project, setting the legacy project as the Reference (RFx) project. Then, the user submits the request for invisible module usage from the legacy project. The Basic Development Manager reviews the request by navigating to the Module Schematics section under the Invisible Module Project Request tab, where they select the request, provide approver comments, and either approve or reject it. The preconditions for submitting such a request include the requester having the 'Application Engineer' role, being the version owner of the carryover project, and the legacy project being in RFD or PD state, active, with a release level in OP2 of at least MLC65 or F06, and containing invisible modules. 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+  
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
